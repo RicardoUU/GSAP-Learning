@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 // 导入各个动画组件
-import { initBasicDemo } from '../components/basicDemo.js';
-import { initTimelineDemo } from '../components/timelineDemo.js';
-import { initScrollDemo } from '../components/scrollDemo.js';
-import { initAdvancedDemo } from '../components/advancedDemo.js';
-import { initPathDemo } from '../components/pathDemo.js';
-import { initInteractiveDemo } from '../components/interactiveDemo.js';
-import { initAnimationExamples } from '../components/animationExamples.js';
+import { initBasicDemo } from './components/basicDemo.js';
+import { initTimelineDemo } from './components/timelineDemo.js';
+import { initScrollDemo } from './components/scrollDemo.js';
+import { initAdvancedDemo } from './components/advancedDemo.js';
+import { initPathDemo } from './components/pathDemo.js';
+import { initInteractiveDemo } from './components/interactiveDemo.js';
+import { initAnimationExamples } from './components/animationExamples.js';
 
 // 注册插件
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);

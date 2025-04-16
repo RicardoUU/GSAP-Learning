@@ -6,8 +6,6 @@ const srcCssDir = path.join(__dirname, '../src/css');
 const destCssDir = path.join(__dirname, '../public/css');
 const srcJsDir = path.join(__dirname, '../src/js');
 const destJsDir = path.join(__dirname, '../public/js');
-const srcComponentsDir = path.join(__dirname, '../src/components');
-const destComponentsDir = path.join(__dirname, '../public/js/components');
 
 // 确保目录存在
 function ensureDirectoryExists(dir) {
@@ -45,21 +43,13 @@ function copyDirectory(src, dest) {
   }
 }
 
+// 创建public/assets目录
+ensureDirectoryExists(path.join(__dirname, '../public/assets'));
+
 // 复制CSS文件
 copyDirectory(srcCssDir, destCssDir);
 
 // 复制JS文件
 copyDirectory(srcJsDir, destJsDir);
-
-// 复制组件文件
-ensureDirectoryExists(destComponentsDir);
-const componentFiles = fs.readdirSync(srcComponentsDir);
-for (const file of componentFiles) {
-  if (file.endsWith('.js')) {
-    const srcPath = path.join(srcComponentsDir, file);
-    const destPath = path.join(destComponentsDir, file);
-    copyFile(srcPath, destPath);
-  }
-}
 
 console.log('所有文件复制完成！'); 
