@@ -1,0 +1,19 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+#box2 {
+  background-color: #2ecc71;
+}
+
+#box3 {
+  background-color: #f39c12;
+} 

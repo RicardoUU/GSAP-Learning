@@ -1,0 +1,23 @@
+{
+  "name": "gsap-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "copy": "node scripts/copyFiles.js",
+    "prebuild": "npm run copy",
+    "predev": "npm run copy",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gsap": "^3.12.7"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  }
+}

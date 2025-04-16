@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP学习</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>GSAP动画学习</h1>
+    <p class="description">这是一个用于学习GSAP动画库的项目</p>
+  </header>
+  
+  <main>
+    <section class="demo-section" id="basic-demo">
+      <h2>基础动画</h2>
+      <div class="demo-container">
+        <div class="box" id="box1">盒子1</div>
+        <div class="box" id="box2">盒子2</div>
+        <div class="box" id="box3">盒子3</div>
+      </div>
+      <button id="play-basic">播放动画</button>
+      <button id="reverse-basic">反向播放</button>
+    </section>
+
+    <section class="demo-section" id="timeline-demo">
+      <h2>时间线动画</h2>
+      <div class="demo-container">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+      </div>
+      <button id="play-timeline">播放时间线</button>
+      <button id="pause-timeline">暂停</button>
+      <button id="resume-timeline">继续</button>
+    </section>
+
+    <section class="demo-section" id="scroll-demo">
+      <h2>滚动触发动画</h2>
+      <div class="scroll-container">
+        <div class="scroll-item">滚动元素 1</div>
+        <div class="scroll-item">滚动元素 2</div>
+        <div class="scroll-item">滚动元素 3</div>
+        <div class="scroll-item">滚动元素 4</div>
+        <div class="scroll-item">滚动元素 5</div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="advanced-demo">
+      <h2>高级动画</h2>
+      <div class="demo-container">
+        <div class="advanced-box" id="morphBox">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <path id="morphPath" d="M10,10 H90 V90 H10 Z" fill="#3498db"/>
+          </svg>
+        </div>
+        <div class="advanced-box" id="filterBox">过滤器效果</div>
+        <div class="advanced-box" id="textBox">文字动画</div>
+      </div>
+      <button id="play-advanced">播放高级动画</button>
+      <button id="reset-advanced">重置</button>
+    </section>
+
+    <section class="demo-section" id="path-demo">
+      <h2>路径动画</h2>
+      <div class="path-container">
+        <svg width="100%" height="250" viewBox="0 0 600 250">
+          <path id="motionPath" d="M50,125 C150,25 250,225 350,125 S550,125 550,125" stroke="#3498db" stroke-width="3" fill="none"/>
+          <circle id="ball" cx="50" cy="125" r="15" fill="#e74c3c"/>
+        </svg>
+      </div>
+      <button id="play-path">播放路径动画</button>
+      <button id="pause-path">暂停</button>
+      <button id="progress-path">快进到50%</button>
+    </section>
+
+    <section class="demo-section" id="interactive-demo">
+      <h2>交互式动画控制</h2>
+      <div class="interactive-container">
+        <div class="control-panel">
+          <div class="control-group">
+            <label for="duration-slider">动画时长: <span id="duration-value">1</span>秒</label>
+            <input type="range" id="duration-slider" min="0.1" max="5" step="0.1" value="1">
+          </div>
+          <div class="control-group">
+            <label for="ease-select">缓动函数:</label>
+            <select id="ease-select">
+              <option value="none">无 (线性)</option>
+              <option value="power1.out" selected>Power 1 (简单)</option>
+              <option value="power2.inOut">Power 2 (平滑)</option>
+              <option value="back.out(1.7)">Back (回弹)</option>
+              <option value="elastic.out(1, 0.3)">Elastic (弹性)</option>
+              <option value="bounce.out">Bounce (弹跳)</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>动画属性:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" id="prop-x" checked> X位置</label>
+              <label><input type="checkbox" id="prop-y"> Y位置</label>
+              <label><input type="checkbox" id="prop-rotation"> 旋转</label>
+              <label><input type="checkbox" id="prop-scale"> 缩放</label>
+              <label><input type="checkbox" id="prop-opacity"> 透明度</label>
+            </div>
+          </div>
+          <button id="play-interactive">播放动画</button>
+          <button id="reset-interactive">重置</button>
+        </div>
+        <div class="preview-area">
+          <div class="interactive-box" id="interactive-element">交互元素</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="examples-library">
+      <h2>常用动画示例库</h2>
+      <div class="examples-grid">
+        <div class="example-item" data-anim="fadeIn">淡入</div>
+        <div class="example-item" data-anim="fadeOut">淡出</div>
+        <div class="example-item" data-anim="zoomIn">放大</div>
+        <div class="example-item" data-anim="zoomOut">缩小</div>
+        <div class="example-item" data-anim="slideInLeft">从左滑入</div>
+        <div class="example-item" data-anim="slideInRight">从右滑入</div>
+        <div class="example-item" data-anim="bounce">弹跳</div>
+        <div class="example-item" data-anim="pulse">脉冲</div>
+        <div class="example-item" data-anim="flip">翻转</div>
+        <div class="example-item" data-anim="shake">抖动</div>
+        <div class="example-item" data-anim="rubberBand">橡皮筋</div>
+        <div class="example-item" data-anim="rotateIn">旋转进入</div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="resource-section">
+      <h2>GSAP学习资源</h2>
+      <div class="resources-list">
+        <div class="resource-item">
+          <h3>官方文档</h3>
+          <p>全面的GSAP API文档和使用指南</p>
+          <a href="https://greensock.com/docs/" target="_blank" class="resource-link">访问文档</a>
+        </div>
+        <div class="resource-item">
+          <h3>GSAP示例</h3>
+          <p>精选的动画示例和案例展示</p>
+          <a href="https://greensock.com/examples-showcases/" target="_blank" class="resource-link">查看示例</a>
+        </div>
+        <div class="resource-item">
+          <h3>CheatSheet</h3>
+          <p>GSAP速查表，快速查阅常用属性和方法</p>
+          <a href="https://greensock.com/cheatsheet/" target="_blank" class="resource-link">查看速查表</a>
+        </div>
+        <div class="resource-item">
+          <h3>论坛</h3>
+          <p>活跃的社区论坛，获取帮助和分享经验</p>
+          <a href="https://greensock.com/forums/" target="_blank" class="resource-link">参与讨论</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GSAP学习项目 - <span id="current-year"></span></p>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html> 

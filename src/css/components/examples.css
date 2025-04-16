@@ -1,0 +1,19 @@
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.example-item {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.example-item:hover {
+  background-color: #2980b9;
+} 
